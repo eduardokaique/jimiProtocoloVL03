@@ -1,16 +1,18 @@
 function validarInput() {
-    // var inputProtocolo = document.getElementById('inputProtocolo').value;
+    var inputProtocolo = document.getElementById('inputProtocolo').value;
     // const jsonData = fetch('https://64c7284b0a25021fde921e38.mockapi.io/pacoteProtocolo')
     //     .then(response => response.json())
     //     .then(data => console.log(data))
     //     .catch(error => console.log(error));
 
-    const jsonData = '{ "Nome": "Login", "Propriedades": [ { "Campo": "Start bit", "Tamanho": 4, "Descricao": "Pacotes de 1 bit: 0x78, pacotes de 2 bits: 0x79." }, { "Campo": "Tamanho do pacote", "Tamanho": 2, "Descricao": "" }, { "Campo": "Número de protocolo", "Tamanho": 2, "Descricao": "" }, { "Campo": "ID do Terminal", "Tamanho": 16, "Descricao": "" }, { "Campo": "Código de identificação do modelo", "Tamanho": 4, "Descricao": "" }, { "Campo": "Fuso horário", "Tamanho": 4, "Descricao": "", "Conversao": true }, { "Campo": "Identificação do número de sequencia", "Tamanho": 4, "Descricao": "" }, { "Campo": "Error check", "Tamanho": 4, "Descricao": "" }, { "Campo": "Stop Bit", "Tamanho": 4, "Descricao": "" } ] }';
-
-    let pacotes = JSON.parse(jsonData);
     if (inputProtocolo.length == 44) {
-        let login = pacotes.Propriedades;
+        
+        
+        const jsonData = '{ "Nome": "Login", "Propriedades": [ { "Campo": "Start bit", "Tamanho": 4, "Descricao": "Pacotes de 1 bit: 0x78, pacotes de 2 bits: 0x79." }, { "Campo": "Tamanho do pacote", "Tamanho": 2, "Descricao": "" }, { "Campo": "Número de protocolo", "Tamanho": 2, "Descricao": "" }, { "Campo": "ID do Terminal", "Tamanho": 16, "Descricao": "" }, { "Campo": "Código de identificação do modelo", "Tamanho": 4, "Descricao": "" }, { "Campo": "Fuso horário", "Tamanho": 4, "Descricao": "", "Conversao": true }, { "Campo": "Identificação do número de sequencia", "Tamanho": 4, "Descricao": "" }, { "Campo": "Error check", "Tamanho": 4, "Descricao": "" }, { "Campo": "Stop Bit", "Tamanho": 4, "Descricao": "" } ] }';
+    
         let protocolo = document.getElementById("protocolo");
+        let pacotes = JSON.parse(jsonData);
+        let login = pacotes.Propriedades;
         let posicaoAtual = 0;
 
         for (let index = 0; index < login.length; index++) {
