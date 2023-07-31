@@ -1,5 +1,6 @@
 function validarInput() {
     var inputProtocolo = document.getElementById('inputProtocolo').value;
+    protocolo.innerHTML = "";
     // const jsonData = fetch('https://64c7284b0a25021fde921e38.mockapi.io/pacoteProtocolo')
     //     .then(response => response.json())
     //     .then(data => console.log(data))
